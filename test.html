@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Order</title>
+    <meta charset="UTF-8">
+    <script>
+        function sendRequest2(userId) {
+            var httpRequest = new XMLHttpRequest();
+
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == XMLHttpRequest.DONE && httpRequest.status == 200) {
+                    var json = JSON.parse(httpRequest.responseText);
+
+                    for (var result in json.resultVO) {
+                        if (json.resultVO[result].userName == document.getElementById('input_name').value) {
+                            console.log(json.resultVO[result]._id);
+                        }
+                    }
+                }
+            };
+            httpRequest.open("POST", "http://192.168.1.103:32016/api/v1/order", true);
+            httpRequest.setRequestHeader("Content-Type", "application/json");
+            httpRequest.send("{\"_id\":\"string\",\"orderName\":\"ICEamericano\",\"userId\":\"" + userId + "\",\"userName\":\"" + document.getElementById('input_name').value + "\"}");
+        }
+
+
+
+
+
+        function sendRequest() {
+            var httpRequest = new XMLHttpRequest();
+
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == XMLHttpRequest.DONE && httpRequest.status == 200) {
+                    var json = JSON.parse(httpRequest.responseText);
+
+                    for (var result in json.resultVO) {
+                        if (json.resultVO[result].userName == document.getElementById('input_name').value) {
+                            console.log(json.resultVO[result]._id);
+                            sendRequest2(json.resultVO[result]._id)
+                        }
+                    }
+                }
+            };
+            httpRequest.open("GET", "http://192.168.1.103:32016/api/v1/member", true);
+            httpRequest.setRequestHeader("Content-Type", "application/json");
+            httpRequest.send();
+        }
+    </script>
+</head>
+
+
+<body>
+<h1>GET 방식의 요청</h1>
+이름 : <input id="input_name" type="text"/> <br/>
+
+<section>
+    <div class="discount-title">
+        <h2>바로 주문</h2>
+    </div>
+
+    <div class="section_col5-align">
+        <button class="button" type="button" onclick="sendRequest()">
+            <img src="./pic/mini1.png"/>아메리카노
+        </button>
+
+<!--        <button class="button" type="button" onclick="sendRequest2()">-->
+<!--            <img src="./pic/mini2.png"/>아포카토-->
+<!--        </button>-->
+    </div>
+</section>
+
+</body>
+
+</html>

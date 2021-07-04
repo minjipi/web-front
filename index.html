@@ -189,7 +189,7 @@
                 checkStatus();
             }
         };
-        httpRequest.open("POST", "http://100.100.100.100:9999/api/v1/order", true);
+        httpRequest.open("POST", "http://192.168.1.103:31090/api/v1/order", true);
         httpRequest.setRequestHeader("Content-Type", "application/json");
         console.log("{\"_id\":\"string\",\"orderName\":\"" + menu + "\",\"userId\":\"" + userId + "\",\"userName\":\"" + document.getElementById('userName').value + "\"}");
         httpRequest.send("{\"_id\":\"string\",\"orderName\":\"" + menu + "\",\"userId\":\"" + userId + "\",\"userName\":\"" + document.getElementById('userName').value + "\"}");
@@ -215,7 +215,7 @@
             }
         };
 
-        httpRequest.open("GET", "http://100.100.100.100:9999/api/v1/member", true);
+        httpRequest.open("GET", "http://192.168.1.103:31090/api/v1/member", true);
         httpRequest.setRequestHeader("Content-Type", "application/json");
         httpRequest.send();
     }
@@ -240,7 +240,7 @@
             }
         };
 
-        httpRequest.open("GET", "http://100.100.100.100:9999/api/v1/status", true);
+        httpRequest.open("GET", "http://192.168.1.103:31090/api/v1/status", true);
         httpRequest.setRequestHeader("Content-Type", "application/json");
         httpRequest.send();
 
