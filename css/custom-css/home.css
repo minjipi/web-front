@@ -1,4 +1,12 @@
 /* when you connect this website, show 'this company logo' */
+
+.button {
+    border: hidden;
+    background-color: #2B3E38;
+    color: white;
+    font-family: 'Nanum Gothic';
+}
+
 .screen-fade-out {
     /*background-image: url(../../pic/start_screen.png);*/
     background-repeat: no-repeat;
@@ -50,6 +58,7 @@ section:nth-of-type(2) {
     padding: 1.25rem 0.625rem;
 }
 
+
 .discount-title {
     width: 100%;
     padding-bottom: 0.625rem;
@@ -58,6 +67,7 @@ section:nth-of-type(2) {
     justify-content: flex-start;
     align-items: flex-end;
 }
+
 
 .discount-title > * {
     font-size: 1.375rem;
@@ -71,6 +81,7 @@ section:nth-of-type(2) {
     color: saddlebrown;
 }
 
+
 .discount-title > *:last-child {
     font-size: 0.875rem;
     font-weight: normal;
@@ -80,7 +91,13 @@ section:nth-of-type(2) {
 
 /* 3th <section> style */
 section:nth-of-type(3) {
-    padding: 0.625rem 0.625rem;
+    padding: 1.25rem 0.625rem;
+}
+
+
+/* 3th <section> style */
+section:nth-of-type(4) {
+    padding: 1.25rem 0.625rem;
 }
 
 .notice {
@@ -99,6 +116,7 @@ section:nth-of-type(3) {
     font-size: medium;
     font-family: sans-serif;
 }
+
 .notice:nth-of-type(n+2) {
     border-top: 1px solid rgb(197, 197, 197);
 }
@@ -119,7 +137,7 @@ footer * {
     flex-direction: row;
     align-items: center;
     margin-top: 1.875rem;
-    margin-bottom: 1.25rem;
+    /*margin-bottom: 1.25rem;*/
 
 }
 
