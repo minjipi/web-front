@@ -7,6 +7,17 @@
     font-family: 'Nanum Gothic';
 }
 
+.order-button {
+    background-color: #2B3E38;
+    color: white;
+    font-family: 'Nanum Gothic';
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+}
+
 .screen-fade-out {
     /*background-image: url(../../pic/start_screen.png);*/
     background-repeat: no-repeat;
