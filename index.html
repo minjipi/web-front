@@ -216,6 +216,8 @@
         httpRequest.open("GET", "http://192.168.1.103:32016/api/v1/member", true);
         httpRequest.setRequestHeader("Content-Type", "application/json");
         httpRequest.send();
+
+        setTimeout(checkStatus, 3000);
     }
 
 
@@ -242,7 +244,7 @@
         httpRequest.setRequestHeader("Content-Type", "application/json");
         httpRequest.send();
 
-        setTimeout(checkStatus, 3000);
+        setTimeout(checkStatus, 9000);
     };
 
 
