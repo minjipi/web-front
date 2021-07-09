@@ -48,7 +48,7 @@
 
     <div class="discount-title">
         <h2>주문내역</h2>
-        <span>전체보기<i class="icon-angle-right"></i></span>
+        <span></span>
     </div>
     <div id="ordered">
         <br>
@@ -88,12 +88,13 @@
 <section>
     <div class="discount-title">
         <h2>장바구니</h2>
+        <span></span>
     </div>
     <div id="keep">
         <br>
     </div>
     <div>
-        <span>전체보기<i class="icon-angle-right"></i></span>
+
         <button id="order" class="order-button" onclick="checkMember()">주문하기</button>
     </div>
 </section>
@@ -196,7 +197,7 @@
 
 
     function checkMember() {
-        ordered.innerHTML = keep.innerHTML +  "<div class='section_x-slide-area'><ul><div class='notice'><div class='section_y-slide-area'><span id='status_text'>준비중☕️🐈</span><br></div></div></ul></div>";;
+        ordered.innerHTML = keep.innerHTML +  "<div class='section_x-slide-area'><ul><div class='notice'><div class='section_y-slide-area'><span id='status_text'>준비중☕...️🐈</span><br></div></div></ul></div>";;
         keep.innerHTML = "<br>";
 
         var httpRequest = new XMLHttpRequest();
@@ -233,7 +234,7 @@
                     if (json.resultVO[result].orderId == order_id) {
                         console.log(json.resultVO[result].statusName);
                         if(json.resultVO[result].statusName==='DONE') {
-                            document.getElementById("status_text").innerText="완성☕️🐈";
+                            document.getElementById("status_text").innerText="완성☕️";
                         }
                     }
                 }
